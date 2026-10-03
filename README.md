@@ -13,7 +13,7 @@ codex plugin add questionpunk@questionpunk
 
 Start a new Codex chat after installing. Sign in to your own QuestionPunk account when the host requests OAuth authorization, then review the requested permissions. Never paste an access token or password into a chat. If your installed CLI does not offer plugin installation, update Codex or use a supported desktop client's repository marketplace flow.
 
-The hosted MCP endpoint is **https://app.questionpunk.com/api/v1**. This package contains no credentials, account identifiers, executable hooks, or local server processes. Each user connects their own account; installing the files alone does not authenticate a connection.
+The hosted MCP endpoint is **https://app.questionpunk.com/api/v1**. Its bundled connection is named `questionpunk-cloud` so it can coexist with an existing `questionpunk` desktop connection. This package contains no credentials, account identifiers, executable hooks, or local server processes. Each user connects their own account; installing the files alone does not authenticate a connection.
 
 ## Try it
 

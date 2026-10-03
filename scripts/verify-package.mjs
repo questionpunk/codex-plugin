@@ -47,7 +47,7 @@ assert.equal(
   "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
 );
 assert.deepEqual(mcp.mcpServers, {
-  questionpunk: {
+  "questionpunk-cloud": {
     type: "streamable-http",
     url: "https://app.questionpunk.com/api/v1",
   },
