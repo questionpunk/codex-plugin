@@ -10,7 +10,7 @@
   },
   "homepage": "https://mcp.questionpunk.com/docs",
   "repository": "https://github.com/questionpunk/codex-plugin",
-  "license": "Proprietary",
+  "license": "MIT",
   "keywords": ["research", "surveys", "customer-feedback"],
   "extensions": {
     "com.openai": {

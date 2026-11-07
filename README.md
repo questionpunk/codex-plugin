@@ -46,4 +46,4 @@ npm run build
 
 The checks require Node.js and validate paths, the credential-free remote MCP configuration, all four skills, and public release metadata. Formatting uses a pinned Prettier version. No install scripts or runtime dependencies are included.
 
-See [RELEASE.md](RELEASE.md) for source provenance and verified release evidence. The package declares a proprietary license, matching the QuestionPunk plugin's existing distribution designation.
+See [RELEASE.md](RELEASE.md) for source provenance and verified release evidence. The plugin is MIT licensed (see [LICENSE](LICENSE)). Report security issues as described in [SECURITY.md](SECURITY.md).

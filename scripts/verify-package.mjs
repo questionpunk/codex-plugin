@@ -32,7 +32,12 @@ assert.equal(
   manifest.repository,
   "https://github.com/questionpunk/codex-plugin",
 );
-assert.equal(manifest.license, "Proprietary");
+assert.equal(manifest.license, "MIT");
+assert.deepEqual(
+  await json("plugins/questionpunk/.codex-plugin/plugin.json"),
+  manifest,
+  ".codex-plugin/plugin.json must match plugin.json",
+);
 const presentation = manifest.extensions["com.openai"].interface;
 assert.ok(presentation.shortDescription.length <= 30);
 assert.equal(presentation.displayName, "QuestionPunk");
