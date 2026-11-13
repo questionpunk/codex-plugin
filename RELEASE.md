@@ -9,9 +9,9 @@ New skills:
 - `ai-interview`: an AI interview by text or voice, with its goal, greeting and topics to avoid.
 - `import-survey`: an existing questionnaire, pasted or as a public Google Forms, Typeform, Microsoft Forms, SurveyMonkey or Qualtrics link, with its wording kept.
 
-Every skill's sign-in steps now give the Codex commands (`codex mcp add questionpunk --url https://app.questionpunk.com/api/v1`, then `codex mcp login questionpunk`).
+Every skill's sign-in steps now give only the Codex commands (`codex mcp add questionpunk --url https://app.questionpunk.com/api/v1`, then `codex mcp login questionpunk`).
 
-Tested in Codex CLI 0.169.0, installed from this branch into an empty `CODEX_HOME` with ChatGPT apps off and no QuestionPunk sign-in: "Make a 6-question multiple-choice trivia quiz about the solar system for my 6th graders." Codex used `create-quiz`, called `survey_draft_link` once and gave the link, saying the answer key is set in the editor. Opening the link built the 6 questions and options as written, each with an empty answer key. Its sign-in advice still said "plugin settings" rather than the Codex commands.
+Tested in Codex CLI 0.169.0, installed from this branch into an empty `CODEX_HOME` with ChatGPT apps off and no QuestionPunk sign-in: "Make a 6-question multiple-choice trivia quiz about the solar system for my 6th graders." Codex used `create-quiz`, called `survey_draft_link` once and gave the link, saying the answer key is set in the editor. Opening the link built the 6 questions and options as written, each with an empty answer key. Its sign-in advice still said "plugin settings". The skills now carry only Codex's connect steps (the build fills them per host); rerun with "Make a short survey for the parents at our daycare about the new pickup schedule", Codex called `survey_draft_link` and told the user to run `codex mcp add questionpunk --url https://app.questionpunk.com/api/v1`, then `codex mcp login questionpunk`.
 
 # Release 1.1.4
 
