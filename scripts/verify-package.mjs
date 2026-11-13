@@ -11,9 +11,10 @@ assert.equal(catalog.name, "questionpunk");
 assert.equal(catalog.plugins.length, 1);
 const entry = catalog.plugins[0];
 assert.equal(entry.name, "questionpunk");
+// The plugin's own server needs no sign-in.
 assert.deepEqual(entry.policy, {
   installation: "AVAILABLE",
-  authentication: "ON_INSTALL",
+  authentication: "ON_USE",
 });
 assert.equal(entry.category, "Productivity");
 assert.deepEqual(entry.source, {
@@ -27,7 +28,7 @@ assert.equal(
   "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
 );
 assert.equal(manifest.name, entry.name);
-assert.equal(manifest.version, "1.1.0");
+assert.equal(manifest.version, "1.1.4");
 assert.equal(
   manifest.repository,
   "https://github.com/questionpunk/codex-plugin",
@@ -51,10 +52,14 @@ assert.equal(
   mcp.$schema,
   "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
 );
+// Only the sign-in-free server: it saves and reads nothing, and carries no
+// header, token or command. The account server is added with
+// `codex mcp add` (README), because Codex shows the model only part of a
+// plugin server's tools.
 assert.deepEqual(mcp.mcpServers, {
-  "questionpunk-cloud": {
+  "questionpunk-start": {
     type: "streamable-http",
-    url: "https://app.questionpunk.com/api/v1",
+    url: "https://mcp.questionpunk.com/start",
   },
 });
 const expectedSkills = [
@@ -94,5 +99,5 @@ async function inspect(directory) {
 }
 await inspect(plugin);
 console.log(
-  "PASS: portable manifest, repository catalog, four skills, assets and credential-free HTTP MCP connection",
+  "PASS: portable manifest, repository catalog, four skills, assets and the credential-free sign-in-free MCP server",
 );
