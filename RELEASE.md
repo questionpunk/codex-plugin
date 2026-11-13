@@ -1,3 +1,18 @@
+# Release 1.2.0
+
+Built on November 13, 2026 with `questionpunk-mcp/platforms/build-packages.mjs --version 1.2.0 --skills ai-interview,analyze-results,create-quiz,create-study,group-forms,import-survey,manage-study,review-study` from the QuestionPunk repository's feature branch (PR in that repository). Same servers as 1.1.4.
+
+New skills:
+
+- `group-forms`: a potluck menu, RSVP, sign-up sheet or find-a-time poll from QuestionPunk's templates, which keep each item's claim limit and the shared list; without an account, the public template page.
+- `create-quiz`: a scored quiz with an answer key, or a "how well do you know me" quiz that asks for the creator's own answers.
+- `ai-interview`: an AI interview by text or voice, with its goal, greeting and topics to avoid.
+- `import-survey`: an existing questionnaire, pasted or as a public Google Forms, Typeform, Microsoft Forms, SurveyMonkey or Qualtrics link, with its wording kept.
+
+Every skill's sign-in steps now give the Codex commands (`codex mcp add questionpunk --url https://app.questionpunk.com/api/v1`, then `codex mcp login questionpunk`).
+
+Tested in Codex CLI 0.169.0, installed from this branch into an empty `CODEX_HOME` with ChatGPT apps off and no QuestionPunk sign-in: "Make a 6-question multiple-choice trivia quiz about the solar system for my 6th graders." Codex used `create-quiz`, called `survey_draft_link` once and gave the link, saying the answer key is set in the editor. Opening the link built the 6 questions and options as written, each with an empty answer key. Its sign-in advice still said "plugin settings" rather than the Codex commands.
+
 # Release 1.1.4
 
 Built on November 13, 2026 with QuestionPunk's package generator (`questionpunk-mcp/platforms/build-packages.mjs --version 1.1.4 --skills analyze-results,create-study,manage-study,review-study`) from the skills on production main revision `d39c6b15a4`. The four skills are byte for byte those of the Claude plugin 1.1.4 (questionpunk/claude-plugin): sign-in steps when QuestionPunk isn't connected, complete first drafts, and a draft link before sign-in.

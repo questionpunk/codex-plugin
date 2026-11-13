@@ -34,8 +34,11 @@ This package contains no credentials, account identifiers, executable hooks, or 
 - "Create an unpublished draft called Onboarding feedback with three neutral questions."
 - "Review my draft for unclear wording and confusing branching."
 - "Summarize my study results with sample sizes and supporting evidence."
+- "Set up a potluck sign-up for Friendsgiving with mains, sides and desserts."
+- "Make a 10-question trivia quiz about the solar system for my class."
+- "Set up voice interviews with customers who cancelled last month."
 
-The plugin includes `create-study`, `manage-study`, `review-study`, and `analyze-results` skills. It discovers the current tools and uses saved study IDs and versions rather than assuming a tool prefix or inventing schemas. Draft creation does not authorize publication, sending invitations, purchasing recruitment, or generating respondent answers.
+The plugin includes eight skills: `create-study`, `manage-study`, `review-study` and `analyze-results`; `ai-interview` (an AI interviewer by text or voice); `group-forms` (potluck, RSVP, sign-up sheet, find-a-time poll); `create-quiz` (scored and friend quizzes); and `import-survey` (an existing questionnaire or form link, wording kept). It discovers the current tools and uses saved study IDs and versions rather than assuming a tool prefix or inventing schemas. Draft creation does not authorize publication, sending invitations, purchasing recruitment, or generating respondent answers.
 
 ## Permissions and support
 
@@ -57,6 +60,6 @@ npm run lint
 npm run build
 ```
 
-The checks require Node.js and validate paths, the credential-free sign-in-free server, all four skills, and public release metadata. Formatting uses a pinned Prettier version. No install scripts or runtime dependencies are included.
+The checks require Node.js and validate paths, the credential-free sign-in-free server, all eight skills, and public release metadata. Formatting uses a pinned Prettier version. No install scripts or runtime dependencies are included.
 
 See [RELEASE.md](RELEASE.md) for source provenance and verified release evidence. The plugin is MIT licensed (see [LICENSE](LICENSE)). Report security issues as described in [SECURITY.md](SECURITY.md).
