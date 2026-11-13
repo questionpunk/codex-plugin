@@ -5,7 +5,7 @@
     {
       "name": "questionpunk",
       "source": { "source": "local", "path": "./plugins/questionpunk" },
-      "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_USE" },
       "category": "Productivity"
     }
   ]
