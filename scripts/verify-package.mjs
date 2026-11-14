@@ -28,7 +28,7 @@ assert.equal(
   "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
 );
 assert.equal(manifest.name, entry.name);
-assert.equal(manifest.version, "1.1.4");
+assert.equal(manifest.version, "1.2.0");
 assert.equal(
   manifest.repository,
   "https://github.com/questionpunk/codex-plugin",
@@ -63,8 +63,12 @@ assert.deepEqual(mcp.mcpServers, {
   },
 });
 const expectedSkills = [
+  "ai-interview",
   "analyze-results",
+  "create-quiz",
   "create-study",
+  "group-forms",
+  "import-survey",
   "manage-study",
   "review-study",
 ];
@@ -99,5 +103,5 @@ async function inspect(directory) {
 }
 await inspect(plugin);
 console.log(
-  "PASS: portable manifest, repository catalog, four skills, assets and the credential-free sign-in-free MCP server",
+  "PASS: portable manifest, repository catalog, eight skills, assets and the credential-free sign-in-free MCP server",
 );
